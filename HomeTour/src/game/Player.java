@@ -5,7 +5,8 @@ import fixtures.Room;
 public class Player {
 	Room currentRoom;
 	
-	//Gets and sets
+	//Getters and setters method
+	
 	public Room getCurrentRoom() {
 		return currentRoom;
 	}
