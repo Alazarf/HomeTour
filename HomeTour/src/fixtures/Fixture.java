@@ -14,8 +14,7 @@ public abstract class Fixture {
 		
 	}
 
-	//getter and setter
-	
+	//gets and sets
 	public String getName() {
 		return name;
 	}
