@@ -15,7 +15,7 @@ public class RoomManager {
 	public void init() {
 	    Room Hallway = new Room(
 			"Hallway",
-			"A small foyer",
+			"Hallway",
 			"Currently you're standing at the hallway." 
 			+ " To your East, you find your living room. Your kitchen is on the West" + "\n"
 			+ "And last but not least in the North you can find your Front yard.");
