@@ -1,9 +1,7 @@
 //
 package game;
-import fixtures.*;
 
 import java.util.Scanner;
-
 
 public class Main extends RoomManager {
 
@@ -27,7 +25,7 @@ public class Main extends RoomManager {
 			Main.parse(input, player);
 		}
 		if (gameRunning == 0) {
-			System.out.println("Game Over!");
+			System.out.println("Run the program if you want to play again!");
 		}
 	}
 
@@ -76,7 +74,7 @@ public class Main extends RoomManager {
 			Main.movement(input, player);
 			break;
 		default:
-			System.out.println("\nLooks like you misspelled!\nPlease follow the given direction!\n");
+			System.out.println("\nGame Over!\nBye!\n");
 			break;
 		}
 	}
@@ -102,6 +100,7 @@ public class Main extends RoomManager {
 			default:
 				System.out.println("\nLooks like you misspelled!\nPlease follow the given direction!\n");
 				break;
+				
 			}
 			
 		} else if (player.currentRoom.equals(manager.rooms[1])) {

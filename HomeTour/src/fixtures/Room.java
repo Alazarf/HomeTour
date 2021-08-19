@@ -9,32 +9,27 @@ public class Room extends Fixture {
 
 	public Room(String name, String shortDesc, String longDesc) {
 		super(name, shortDesc, longDesc);
-		this.exits = new Room[4];
-		this.items = new Item[3]; 
+		
 	}
 	
 	public Room[] getExits() {
 		return this.exits;
-	}
-	public void setItems(Item[] items) {
-		this.items = items;
-		
 	}
 	
 	public Room getExit(String direction) { 
 		int index = 0;
 		direction = direction.toUpperCase();
 		switch (direction) {
-		case "East":
+		case "N":
 			index = 0;
 			break;
-		case "West":
+		case "S":
 			index = 1;
 			break;
-		case "South":
+		case "W":
 			index = 2;
 			break;
-		case "North":
+		case "E":
 			index = 3;
 			break;			
 		}
