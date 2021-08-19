@@ -1,5 +1,6 @@
 //
 package game;
+import fixtures.*;
 
 import java.util.Scanner;
 
@@ -36,7 +37,11 @@ public class Main extends RoomManager {
 
 	System.out.println(player.currentRoom.getName() + "\n");
 	System.out.println(player.currentRoom.getLongDescription() + "\n");
+	
+	
 	}
+	
+	
 
 	private static String[] collectInput() {
 
@@ -64,10 +69,10 @@ public class Main extends RoomManager {
 		case "Move" :
 			Main.movement(input, player);
 			break;
-		case "G" :
+		case "Forward" :
 			Main.movement(input, player);
 			break;
-		case "M" :
+		case "Backward" :
 			Main.movement(input, player);
 			break;
 		default:
@@ -102,13 +107,13 @@ public class Main extends RoomManager {
 		} else if (player.currentRoom.equals(manager.rooms[1])) {
 		
 			switch (input[1]) {
-			case "East":
+			case "South":
 				System.out.println("There is no way out this way please turn around\n");
 				break;
 			case "West":
 				System.out.println("There is no way out this way please turn around.\n");
 				break;
-			case "South":
+			case "East":
 				System.out.println("You walk back into the Hallway\n");
 				player.setCurrentRoom(manager.rooms[0]);
 				break;
@@ -122,17 +127,17 @@ public class Main extends RoomManager {
 		} else if(player.currentRoom.equals(manager.rooms[2])) {
 		
 			switch (input[1]) {
-			case "East":
+			case "South":
 				System.out.println("You walk out into the backyard\n");
 				player.setCurrentRoom(manager.rooms[3]);
 				break;
-			case "West":
-				System.out.println("There is no way out this way please turn around\n");
-				break;
-			case "South":
-				System.out.println("There is no way out this way please turn around\n");
-				break;
 			case "North":
+				System.out.println("There is no way out this way please turn around\n");
+				break;
+			case "East":
+				System.out.println("There is no way out this way please turn around\n");
+				break;
+			case "West":
 				System.out.println("You turn around and walk back into the Hallway.\n");
 				player.setCurrentRoom(manager.rooms[0]);
 				break;
@@ -163,24 +168,28 @@ public class Main extends RoomManager {
 		} else if(player.currentRoom.equals(manager.rooms[4])) {
 		
 			switch (input[1]) {
-			case "East":
+			case "South":
 				System.out.println("Great! Now, you're back in the house.\n");
 				player.setCurrentRoom(manager.rooms[0]);
+				break;
+			case "East":
+				System.out.println("There is no way out this way please turn around\n");
 				break;
 			case "West":
 				System.out.println("There is no way out this way please turn around\n");
 				break;
-			case "South":
-				System.out.println("There is no way out this way please turn around\n");
-				break;
 			case "North":
-				System.out.println("It's raining outside. Please go back toward the East.\n");
+				System.out.println("It's raining outside. Please go back toward the South.\n");
 				break;
 			default:
 				System.out.println("\nLooks like you misspelled!\nPlease follow the given direction!\n");
 				break;
 			}
+			
 		}
-	}
+		
+		
+		}
 	
+
 }

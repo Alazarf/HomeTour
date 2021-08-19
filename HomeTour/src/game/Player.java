@@ -1,12 +1,13 @@
 //
 package game;
 
-import fixtures.Room;
+import fixtures.*;
 
 public class Player {
 	Room currentRoom;
 	
 	//Getters and setters method
+	
 	
 	public Room getCurrentRoom() {
 		return currentRoom;
