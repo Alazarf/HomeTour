@@ -44,7 +44,9 @@ public class Main extends RoomManager {
 	private static String[] collectInput() {
 
 			Scanner scanner = new Scanner(System.in);
-	        System.out.println("\nTo start the game please type Go and Direction. \nFor Example:\"Go East\"");
+	        System.out.println("\nTo start the game please type Go and pick which Direction you want to go. \nFor Example:\"Go East\"" );
+	        System.out.println("\nQuit to end the game. \nGood Luck!" );
+
 
 	        String input = scanner.nextLine();
 	        String[] strArr = input.split(" "); 
@@ -83,7 +85,7 @@ public class Main extends RoomManager {
 		if(player.currentRoom.equals(manager.rooms[0])) {
 			switch (input[1]) {
 			case "East":
-				System.out.println("Now You're walking to the Living room\n");
+				System.out.println("Now You're walking toward the Living room\n");
 				player.setCurrentRoom(manager.rooms[2]);
 				break;
 			case "West":
@@ -116,6 +118,9 @@ public class Main extends RoomManager {
 				System.out.println("You walk back into the Hallway\n");
 				player.setCurrentRoom(manager.rooms[0]);
 				break;
+
+					
+				
 			case "North":
 				System.out.println("There is no way out this way please turn around\n");
 				break;
@@ -186,6 +191,7 @@ public class Main extends RoomManager {
 			}
 			
 		}
+		
 		
 		
 		}
